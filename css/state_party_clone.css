@@ -608,3 +608,22 @@ body.tx-clone {
     padding: 3rem 1rem !important;
   }
 }
+
+.candidate-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.candidate {
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  .candidate-columns {
+    grid-template-columns: 1fr;
+  }
+}
