@@ -60,40 +60,20 @@
 }
 </script>
 
+<style>	
 .candidate-columns {
-  display: flex !important;
+  display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
   flex-wrap: nowrap;
   gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
 }
 
 .candidate-columns > .candidate {
   flex: 1 1 0;
   min-width: 0;
-  margin: 0;
 }
 
-.candidate-columns .vc_col-sm-4 {
-  width: 100% !important;
-}
-
-@media (max-width: 768px) {
-  .candidate-columns {
-    flex-direction: column;
-  }
-
-  .candidate-columns > .candidate {
-    width: 100%;
-  }
-}	
-	
+</style>	
 </head>
 <body class="tx-clone">
 
@@ -218,7 +198,7 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 20px;
-    }
+    }	  
 	  
   </style>
 	<!-- Other scripts and meta tags -->
