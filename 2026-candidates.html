@@ -187,6 +187,35 @@
       margin: 0 auto;
       padding: 0 20px;
     }
+
+.candidate-columns {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.candidate-columns > .candidate {
+  min-width: 0;
+  margin: 0;
+}
+
+/* Let each candidate's image/content use its full card width */
+.candidate-columns .vc_col-sm-4 {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .candidate-columns {
+    grid-template-columns: 1fr;
+  }
+}
+	  
   </style>
 	<!-- Other scripts and meta tags -->
     
