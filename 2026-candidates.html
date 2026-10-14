@@ -61,15 +61,16 @@
 </script>
 
 <style>	
-.candidate-columns {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+body .candidate-columns {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   gap: 20px;
 }
 
-.candidate-columns > .candidate {
-  flex: 1 1 0;
+body .candidate-columns > section.candidate {
+  flex: 1 1 0 !important;
+  width: auto !important;
   min-width: 0;
 }
 
