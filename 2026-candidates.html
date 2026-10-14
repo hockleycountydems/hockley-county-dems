@@ -59,6 +59,40 @@
   "email": "hockleycountydems@gmail.com"
 }
 </script>
+
+.candidate-columns {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.candidate-columns > .candidate {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.candidate-columns .vc_col-sm-4 {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .candidate-columns {
+    flex-direction: column;
+  }
+
+  .candidate-columns > .candidate {
+    width: 100%;
+  }
+}	
 	
 </head>
 <body class="tx-clone">
@@ -138,9 +172,7 @@
   </nav>
   <div class="tx-clone-nav-accent-bar"></div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2026 Texas Democratic Candidates</title>
@@ -187,40 +219,6 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-
-.candidate-columns {
-  display: flex !important;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.candidate-columns > .candidate {
-  flex: 1 1 0;
-  min-width: 0;
-  margin: 0;
-}
-
-.candidate-columns .vc_col-sm-4 {
-  width: 100% !important;
-}
-
-@media (max-width: 768px) {
-  .candidate-columns {
-    flex-direction: column;
-  }
-
-  .candidate-columns > .candidate {
-    width: 100%;
-  }
-}
 	  
   </style>
 	<!-- Other scripts and meta tags -->
@@ -248,9 +246,7 @@
       }
     </style>
 </head>
-<body>
 
-  <!-- HTML Content -->
   <header class="election-header">
     <h1>2026 Texas Democratic Candidates</h1>
     <p class="subtitle">General Election: Tuesday, November 3</p>
