@@ -1037,3 +1037,15 @@
   <script src="js/cms_loader.js"></script>
 </body>
 </html>
+`;
+
+try {
+  const contentBase64 = btoa(unescape(encodeURIComponent(fullPageHtml)));
+  await ghPut(targetPath, fullPageHtml, '', 'Create page ' + targetPath);
+  status.textContent = 'Page published: ' + targetPath;
+} catch (err) {
+  status.textContent = 'Error: ' + err.message;
+} finally {
+  btn.disabled = false;
+}
+}
