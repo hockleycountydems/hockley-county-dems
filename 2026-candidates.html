@@ -62,16 +62,22 @@
 
 <style>	
 body .candidate-columns {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  gap: 20px;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* Forces exactly 3 equal columns per row */
+  gap: 30px !important;                             /* Clean spacing between cards */
+  width: 100%;
 }
 
 body .candidate-columns > section.candidate {
-  flex: 1 1 0 !important;
-  width: auto !important;
+  width: 100% !important;
   min-width: 0;
+}
+
+/* This stops layout breakage by switching to 1 card per row on mobile phones */
+@media (max-width: 768px) {
+  body .candidate-columns {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 </style>	
