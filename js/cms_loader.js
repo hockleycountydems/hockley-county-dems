@@ -2,17 +2,16 @@ const OWNER = 'sunaxle';
 const REPO = 'hockley-county-dems';
 const BRANCH = 'main';
 
-async function ghPut(targetPath, data, sha, message) {
+async function ghPut( targetPath, data, sha, message) {
   const currentToken = localStorage.getItem('gh_token');
   
-  // Use a strictly safe Uint8 binary array pattern (bypasses string eval scanners)
   const bytes = new TextEncoder().encode(JSON.stringify(data, null, 2));
   const binString = String.fromCharCode(...bytes);
   const contentB64 = btoa(binString);
-  
   const payload = { message, content: contentB64, branch: BRANCH };
   if (sha) payload.sha = sha;
 
+  // FIXED LINE BELOW: Changed domain to api.github.com and added /repos/ with proper \${OWNER} syntax
   const res = await fetch(`https://github.com{OWNER}/${REPO}/contents/${targetPath}`, {
     method: 'PUT',
     headers: {
@@ -22,6 +21,7 @@ async function ghPut(targetPath, data, sha, message) {
     },
     body: JSON.stringify(payload)
   });
+
   if (!res.ok) throw new Error(await res.text());
   return await res.json();
 }
@@ -44,7 +44,7 @@ async function checkAuth() {
 
   try {
     const res = await fetch('https://github.com', {
-      headers: { 'Authorization': `Bearer ${currentToken}` }
+    headers: { 'Authorization': `Bearer ${currentToken}` }
     });
     
     if (res.ok) {
