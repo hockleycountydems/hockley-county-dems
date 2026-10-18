@@ -318,24 +318,30 @@
 
       <!-- Form -->
       <div>
-        <form style="padding-right: 1.5rem;">
-        <style>
-  label {
-    color: #000000;
-    padding: 1.5rem;
-  }
+        <form class="contact-form">
+  <style>
+    .contact-form {
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
 
-  input,
-  textarea {
-    color: #38b6ff;
-    border: 1px solid #38b6ff;
-  } 
+    .contact-form label {
+      display: block;
+      color: #000;
+      margin-bottom: 0.5rem;
+    }
 
-  .contact-form {
-  padding: 1.5rem;
-  box-sizing: border-box;
-  }      
-        </style>
+    .contact-form input,
+    .contact-form textarea {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      color: #38b6ff;
+      border: 1px solid #38b6ff;
+      margin-bottom: 1rem;
+    }
+  </style>
 
   <label for="name">Full Name</label>
   <input type="text" id="name" required placeholder="Jane Doe">
