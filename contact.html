@@ -317,8 +317,8 @@
       </div>
 
       <!-- Form -->
-      <div>
-        <form class="contact-form">
+    <div>
+      <form class="contact-form">
   <style>
     .contact-form {
       padding: 1.5rem;
@@ -353,12 +353,17 @@
   <textarea id="message" rows="5" required placeholder="How can we help you?"></textarea>
           
       <div style="text-align: center; border-top: 1px solid var(--glass-border); padding-top: 2rem;">
-            <p style="margin-bottom: 1rem; color: var(--text-muted);">Just want to stay in the loop with email and text updates?</p>
-            <a href="subscribe.html" class="btn btn-secondary" style="width: 100%;">Get Email Updates</a>
-      </div>
-        </form>
+            <p style="margin-bottom: 1rem; color: var(--text-muted);">
+              Just want to stay in the loop with email and text updates?
+            </p>
+            <label>
+              <input type="checkbox" name="email_updates" value="yes">
+              Get Email Updates
+            </label>
       </div>
 
+      <button type="submit">Submit</button>  
+      </form>    
     </div>
   </section>
 
