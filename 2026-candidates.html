@@ -1895,7 +1895,47 @@ District 88</h3>
 	</section>
 </div>
 
+<section>
+<style>	
+.message-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
 
+.message-item {
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .message-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.protest-title {
+  font-family: "Protest Revolution", sans-serif;
+  text-align: center;	
+}
+</style>	
+	
+<div class="message-grid">
+  <div class="message-item">Pro Rural Public Schools</div>
+  <div class="message-item">Pro Teacher</div>
+  <div class="message-item">Pro Rural Healthcare</div>
+  <div class="message-item">Pro Water Rights</div>
+  <div class="message-item">Pro Worker</div>
+  <div class="message-item">Pro Farmers and Ranchers</div>
+  <div class="message-item">Pro Higher Ed</div>
+  <div class="message-item">Pro Justice</div>
+  <div class="message-item">Pro Equality</div>
+  <div class="message-item">Pro Freedom</div>	
+</div>
+
+<h2 class="protest-title">Pro Texas</h2>
+</section>	
+	
 </body>
 </html>
 	
